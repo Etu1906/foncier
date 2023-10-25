@@ -53,18 +53,7 @@ public class Propriete {
     return idpropriete;
   }
 
-  public void insert(EntityManager manager, String idcitoyen) throws Exception {
-    String sql =
-      "INSERT INTO propriete (description, adresse, geom, superficie,idcin) VALUES (?, ?, ST_GeomFromText(?,4326), ?,?)";
-    manager
-      .createNativeQuery(sql)
-      .setParameter(1, description)
-      .setParameter(2, adresse)
-      .setParameter(3, polygone.getGeomString())
-      .setParameter(4, superficie)
-      .setParameter(5, idcitoyen)
-      .executeUpdate();
-  }
+
 
   public Propriete(
     String geom,

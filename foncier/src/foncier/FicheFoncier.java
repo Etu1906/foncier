@@ -30,6 +30,23 @@ public class FicheFoncier implements Serializable {
     return proprietes;
   }
 
+  public Propriete getFirst() {
+    return proprietes.get(0);
+  }
+
+  public void insert(EntityManager manager) throws Exception {
+    String sql =
+      "INSERT INTO propriete (description, adresse, geom, superficie,idcin) VALUES (?, ?, ST_GeomFromText(?,4326), ?,?)";
+    manager
+      .createNativeQuery(sql)
+      .setParameter(1, getFirst().description)
+      .setParameter(2, getFirst().adresse)
+      .setParameter(3, getFirst().getPolygone().getGeomString())
+      .setParameter(4, getFirst().superficie)
+      .setParameter(5, citoyen.getIdcin())
+      .executeUpdate();
+  }
+
   public FicheFoncier(String idcin) {
     this.citoyen = new Citoyen(idcin);
   }

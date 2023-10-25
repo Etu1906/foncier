@@ -47,7 +47,7 @@ public class ProprieteService {
     @PathParam("idcin") String idcin
   ) throws Exception {
     Gson gson = new Gson();
-    Propriete p = gson.fromJson(donneesJSON, Propriete.class);
-    p.insert(manager, idcin);
+    FicheFoncier f = gson.fromJson(donneesJSON, FicheFoncier.class);
+    f.insert(manager);
   }
 }
