@@ -1,0 +1,97 @@
+body,*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/illustration-portrait-groupe-employes_74855-5495.avif');
+    background-position: center;
+    background-size: cover;
+    z-index: 3;
+}
+#filter{
+    background-color: rgb(18, 74, 83);
+    z-index: 1;
+    position: fixed;
+    opacity: 95%;
+    width: 100vw;
+    height: 100vh;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+
+}
+label{
+    font-size: smaller;
+}
+#content{
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 100;
+}
+#content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#left img{
+    width: 60%;
+}
+
+#left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+#right{
+    padding: 2vh 2vh 0vh 2vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    
+}
+form{
+    width: 100%;
+    /* margin-top: 2vh; */
+}
+input,select{
+    width: 69%;
+    height: 4vh;
+    border-radius: 5px;
+    border: none;
+    background-color: #b4b2b2;
+    padding: 5px;
+    margin-top: 1vh;
+}
+select{
+    height: 5vh;
+    width: 71%;
+}
+input:focus, select:focus{
+    outline:none;
+}
+h2{
+    margin-top: 4vh;
+    text-align: center;
+}
+input[type=submit]{
+    background-color: rgb(18, 74, 83);
+    color: white;
+    font-weight: bold;
+    width: 71%;
+    height: 7vh;
+    border: none;
+    border-radius: 5px;
+    margin-top: 6vh;
+}
