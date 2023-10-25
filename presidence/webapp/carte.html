@@ -4,6 +4,22 @@
     <title>Carte Google Maps</title>
   </head>
   <body>
+    <form action="carte_ajout" method="post">
+      <p>
+        <label for=""> Adresse </label>
+        <input type="text" name="adresse" />
+      </p>
+      <p>
+        <label for=""> description </label>
+        <input type="text" name="description" />
+      </p>
+      <p>
+        <input type="hidden" name="idcin" value="1" />
+      </p>
+      <p>
+        <input type="submit" value="Enregistrer" />
+      </p>
+    </form>
     <div id="map" style="height: 400px; width: 100%"></div>
     <button id="toggleRecording">Activer l'enregistrement</button>
     <button id="saveData" disabled>Enregistrer les données</button>
@@ -33,13 +49,13 @@
         var saveButton = document.getElementById("saveData");
         saveButton.addEventListener("click", function () {
           if (recordedData.length > 0) {
-            console.log( recordedData);
+            console.log(recordedData);
             // Vous pouvez ajouter les données en tant que paramètres de requête à l'URL GET
             var dataToSend = JSON.stringify({
               coordonnee: recordedData,
               id_cin: 1,
             });
-            var url = "/presidence/foncier";
+            var url = "/application/foncier";
             var xhr = new XMLHttpRequest();
             xhr.open("POST", url, true);
             xhr.setRequestHeader("Content-Type", "application/json");
