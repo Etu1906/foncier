@@ -1,0 +1,41 @@
+Sanre: 
+    ✔ deployer @done(23-10-14 16:29)
+Foncier:
+    ✔ Base foncier @done(23-10-14 16:29)
+    ✔ fichier deploiement @done(23-10-14 16:53)
+    ✔ data source @done(23-10-14 16:53)
+    ✔ getCitoyen (ejb) @done(23-10-14 17:52)
+    ✔ getInformations fonciers @done(23-10-14 17:52)
+    ✔ serveur ejb @done(23-10-14 17:52)
+
+banque:
+    ✔ base banque @done(23-10-15 18:56)
+    ✔ getCitoyen WS @done(23-10-15 18:56)
+    ✔ get data banque @done(23-10-15 18:56)
+    ✔ Web Service Controller @done(23-10-15 18:56)
+CIN:
+    ✔ affichage @done(23-10-14 19:34)
+    ✔ servlet entree @done(23-10-14 20:00)
+    ✔ deploiment @done(23-10-14 20:00)
+    ☐ servlet output
+    ✔ miantso sante @done(23-10-14 19:34)
+    ✔ miantso foncier @done(23-10-14 19:34)
+    ☐ affichage resultat 
+    ☐ dynamisation resultat 
+
+FONCIER:
+    ✔ table propriete @done(23-10-25 13:08)
+    ✔ getAllproprietes() @done(23-10-25 13:28)
+    ✔ ejb getAllPropriete() @done(23-10-25 13:28)
+    ☐ presidence test
+    ☐ presidence affichage
+    ☐ getCoordonnees()
+    ☐ ejb getDetails()
+    ☐ presidence affichage
+    ☐ HttpPost insert ()
+    ☐ ejb insert 
+    ☐ affichage insert carte
+    ☐ affichage insert form
+    ☐ servlet insert form
+
+
